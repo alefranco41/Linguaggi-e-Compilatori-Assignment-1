@@ -17,11 +17,11 @@
 
 namespace llvm {
 
-class ModulePass;
+class FunctionPass;
 
-class LocalOpts : public PassInfoMixin<LocalOpts> {
+class LocalOptsPass : public PassInfoMixin<LocalOptsPass> {
 public:
-  PreservedAnalyses run(Module &M, ModuleAnalysisManager &AM);
+  PreservedAnalyses run(Function &F, FunctionAnalysisManager &AM);
 };
 
 } // end namespace llvm

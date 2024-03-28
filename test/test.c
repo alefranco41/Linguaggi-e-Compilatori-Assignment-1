@@ -23,8 +23,8 @@ void foo(int a, int b, int c) {
     printf("r3 = %d\n", r3); //b
     printf("r4 = %d\n", r4); //(a << 4) - a
     printf("r5 = %d\n", r5); //(a << 4) - a
-    printf("r5 = %d\n", r6); //a >> 3
-    printf("r5 = %d\n", r8); //b
+    printf("r6 = %d\n", r6); //a >> 3
+    printf("r8 = %d\n", r8); //b
 }
 
 int main() {
