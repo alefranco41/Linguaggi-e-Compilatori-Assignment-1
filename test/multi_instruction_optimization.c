@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 void foo(int b) {                               
-    int a = b - 3;
-    int c = a + 3;
+    int a = b / 5;
+    int c = 5 * a;
 
     printf("%d\n", c); 
 }

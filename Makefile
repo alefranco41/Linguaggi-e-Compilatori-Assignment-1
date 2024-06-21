@@ -1,10 +1,13 @@
-# Definire i file di input e output
+# Definizione dei file di input e output
 C_FILES := $(wildcard test/*.c)
 IR_FILES := $(patsubst test/%.c, test/%.ll, $(C_FILES))
 BC_FILES := $(patsubst test/%.c, test/%.bc, $(C_FILES))
 MEM2REG_IR_FILES := $(patsubst test/%.bc, test/%_mem2reg.ll, $(BC_FILES))
 MEM2REG_BC_FILES := $(patsubst test/%.bc, test/%_mem2reg.bc, $(BC_FILES))
 OPTIMIZED_IR_FILES := $(patsubst test/%.bc, test/%_optimized.ll, $(BC_FILES))
+
+# Dichiarazione dei file intermedi come preziosi
+.PRECIOUS: $(MEM2REG_IR_FILES) $(MEM2REG_BC_FILES)
 
 # Target principale
 all: optimize
