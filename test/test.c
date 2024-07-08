@@ -17,14 +17,8 @@ void foo(int a, int b, int c) {
     int r8 = r7 - 1; // r8 = b
 
     // Stampa i risultati per mostrare l'effetto delle ottimizzazioni
-    printf("r0 = %d\n", r0); //a
-    printf("r1 = %d\n", r1); //a
-    printf("r2 = %d\n", r2); //b
-    printf("r3 = %d\n", r3); //b
-    printf("r4 = %d\n", r4); //(a << 4) - a
-    printf("r5 = %d\n", r5); //(a << 4) - a
-    printf("r6 = %d\n", r6); //a >> 3
-    printf("r8 = %d\n", r8); //b
+    printf("%d%d%d%d%d%d%d%d\n", r0,r1,r2,r3,r4,r5,r6,r8); 
+
 }
 
 int main() {
